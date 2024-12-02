@@ -1,0 +1,72 @@
+package Terror;
+
+public class mainT {
+    public static void main(String[] args) {
+        // Crear algunos libros de ejemplo
+        terror[] libros = new terror[] {
+            new terror("It", "Stephen King", 20.99, 25, 
+                "En el pequeño pueblo de Derry, un grupo de niños es acechado por un ser malévolo que cambia de forma y se alimenta del miedo. Con el tiempo, estos niños, unidos por una amistad indestructible, se enfrentan a la entidad en un intento por derrotarla, pero se dan cuenta de que sus peores temores no solo acechan el presente, sino también el pasado.",
+                "Viking Penguin", "1986", 1138, "Español", "C:\\imagenes\\it.jpg"),
+            new terror("El resplandor", "Stephen King", 18.00, 18, 
+                "Jack Torrance, un escritor en apuros, acepta un empleo como vigilante de invierno en el aislado Hotel Overlook. Acompañado de su esposa Wendy y su hijo Danny, quien tiene poderes psíquicos, se enfrentan a lo inexplicable. ",
+                "Doubleday", "1977", 447, "Español", "C:\\imagenes\\resplandor.jpg"),
+            new terror("Drácula", "Bram Stoker", 12.99, 20, 
+                "El clásico de terror que relata la lucha entre el conde Drácula, un vampiro milenario, y un grupo de personas decididas a detener su avance hacia la ciudad de Londres.",
+                "Archibald Constable and Company", "1897", 418, "Español", "C:\\imagenes\\dracula.jpg"),
+            new terror("La casa infernal", "Richard Matheson", 15.85, 22, 
+                "En una mansión apartada en la selva, un grupo de científicos y exploradores se dispone a investigar los extraños fenómenos que ocurren en el lugar. Sin embargo, pronto descubren que la casa tiene vida propia y es capaz de explotar los miedos más profundos de cada uno.",
+                "Viking Press", "1971", 332, "Español", "C:\\imagenes\\lacasain.jpg"),
+            new terror("La maldición de Hill House", "Shirley Jackson", 14.99, 18, 
+                "Cuatro personas se hospedan en Hill House: una joven que está investigando fenómenos paranormales, su anfitrión excéntrico, y dos miembros de la familia que se sienten atraídos por la misteriosa casa. ",
+                "Houghton Mifflin", "1959", 182, "Español", "C:\\imagenes\\hill.jpg"),
+            new terror("Cuentos de terror", "Edgar Allan Poe", 11.95, 26, 
+                "Una selección de los relatos más oscuros de Poe, que exploran la locura, la muerte y lo sobrenatural. Entre ellos se encuentran \"El corazón delator\", \"El cuervo\" y \"El gato negro\".",
+                "Harper & Brothers", "1845", 350, "Español", "C:\\imagenes\\cuentos.jpg"),
+            new terror("La llamada de Cthulhu", "H.P. Lovecraft", 9.99, 19, 
+                " En este relato, el investigador Francis Wayland Thurston desvela el misterio detrás de una serie de extraños sucesos que apuntan a la existencia de Cthulhu, una criatura cósmica de inmenso poder que duerme bajo el océano.",
+                "Visionary Publishing", "1928", 123, "Español", "C:\\imagenes\\llamada.jpg"),
+            new terror("Mexican Gothic", "Silvia Moreno-Garcia", 16.99, 10, 
+                "En el México de los años 50, Noemí Taboada viaja a una mansión aislada en el campo para investigar la extraña enfermedad que afecta a su prima. Lo que encuentra es un hogar plagado de secretos oscuros, una familia atormentada por la locura y el terror de lo sobrenatural.",
+                "Del Rey", "2020", 301, "Español", "C:\\imagenes\\mexican.jpg"),
+            new terror("El exorcista", "William Peter Blatty", 17.95, 11, 
+                " Una joven de doce años, Regan, es poseída por una entidad demoníaca, y su madre, desesperada, busca ayuda. El padre Karras, un sacerdote que lucha con su fe, es llamado para realizar el exorcismo.",
+                "Harper & Row", "1971", 400, "Español", "C:\\imagenes\\ex.jpg"),
+            new terror("El retrato de Dorian Gray", "Oscar Wilde", 13.95, 18, 
+                "La historia de Dorian Gray, un joven que, influenciado por un hedonista llamado Lord Henry, vende su alma para mantener su juventud eterna. Mientras su retrato envejece y refleja sus crímenes y decadencia moral, Dorian vive una vida de excesos sin sufrir las consecuencias físicas de sus acciones.",
+                "Ward, Lock & Co", "1890", 254, "Español", "C:\\imagenes\\retrato.jpg"),
+            new terror("Penny Dreadful", "Krysty Wilson-Cairns", 18.95, 23, 
+                "Inspirada en la serie de televisión homónima, esta novela se sumerge en el Londres victoriano, donde lo sobrenatural, lo oscuro y lo grotesco están a la orden del día. Las criaturas míticas y los demonios de la literatura gótica cobran vida mientras un grupo de personajes luchan por sobrevivir en un mundo donde el horror es omnipresente.",
+                "Titan Books", "2014", 252, "Español", "C:\\imagenes\\penny.jpg"),
+            new terror("Nosferatu", "Joe Hill", 22.99, 16, 
+                "Vic McQueen tiene una habilidad única para encontrar cosas perdidas, pero pronto se enfrenta a un terror aún mayor: un hombre inmortal que roba almas de niños, Charlie Manx, que se alimenta de la vitalidad de los más jóvenes.",
+                "William Morrow", "2011", 724, "Español", "C:\\imagenes\\nos.jpg"),
+            new terror("Carrie", "Stephen King", 14.99, 12, 
+                "Carrie White es una adolescente marginada que, después de años de abuso escolar y familiar, descubre que tiene poderes telequinéticos. En su baile de graduación, la crueldad de sus compañeros la lleva a desatar toda su furia, provocando una masacre.",
+                "Doubleday", "1974", 199, "Español", "C:\\imagenes\\carrie.jpg"),
+            new terror("Frankenstein", "Mary Shelley", 12.95, 26, 
+                "El doctor Victor Frankenstein crea una criatura humana a partir de partes de cadáveres, pero se horroriza al ver su creación y la rechaza. Esta criatura, abandonada y maltratada, comienza una búsqueda de venganza que lleva a Frankenstein a un destino trágico. ",
+                "Lackington, Hughes, Harding, Mavor & Jones", "1818", 280, "Español", "C:\\imagenes\\frank.jpg"),
+            new terror("La conjura de los necios", "John Kennedy Toole", 14.99, 25, 
+                "gnatius J. Reilly, confronta la sociedad y sus propios demonios internos. La historia gira en torno a la vida de Ignatius, un hombre peculiar y egocéntrico que se enfrenta a un mundo moderno que no entiende, desatando caos y absurdos que rayarán en lo macabro.",
+                "Ediciones Maeva", "1980", 464, "Español", "C:\\imagenes\\conjura.jpg"),
+            new terror("Muerto hasta el anochecer", "Charlaine Harris", 16.99, 16, 
+                "En esta novela, Sookie Stackhouse, una camarera con la capacidad de leer mentes, se ve envuelta en un mundo de vampiros y otros seres sobrenaturales. La historia se desarrolla en un pequeño pueblo de Louisiana, donde los humanos y los no-muertos intentan convivir en un tenso equilibrio.",
+                "Ace Books", "2005", 297, "Español", "C:\\imagenes\\muerto.jpg"),
+            new terror("El Necronomicon", "H.P. Lovecraft", 10.99, 13, 
+                "El Necronomicon es un libro de saberes oscuros y prohibidos que aparece en las historias de Lovecraft y otros autores de la mitología de Cthulhu. Se dice que fue escrito por el árabe loco Abdul Alhazred y contiene conocimientos arcanos sobre antiguos dioses cósmicos, rituales para invocar entidades interdimensionales y secretos tan terribles que pueden destruir la cordura de quienes lo leen.",
+                "Arkham House", "1936", 150, "Español", "C:\\imagenes\\necro.jpg"),
+            new terror("El extraño caso del Dr. Jekyll y Mr. Hyde", "Robert Louis Stevenson", 25.99, 7, 
+                "Esta novela corta de terror psicológico cuenta la historia del respetable Dr. Henry Jekyll, un médico que crea una poción que le permite transformarse en su alter ego, el malvado y depravado Edward Hyde.",
+                "Longmans, Green & Co.", "1886", 144, "Español", "C:\\imagenes\\extr.jpg"),
+            new terror("La autopsia de un hombre muerto", "Michael Shea", 14.99, 15, 
+                "En un hospital de un pueblo apartado, un médico recibe un cadáver cuya causa de muerte es un misterio absoluto. Mientras lleva a cabo la autopsia, descubre detalles escalofriantes que van más allá de lo físico y empiezan a revelar una historia de horror sobrenatural.",
+                "Dark Harvest", "1986", 274, "Español", "C:\\imagenes\\autop.jpg"),
+            new terror("El hombre de la máscara de hierro", "Alexandre Dumas", 14.95, 21, 
+                "La historia, cargada de conspiraciones, traiciones y secretos, sigue a los tres mosqueteros en su intento de descubrir la verdad detrás de un enigma que pone en riesgo la estabilidad del reino.",
+                "Michel Lévy Frères", "1847", 332, "Español", "C:\\imagenes\\mask.jpg")
+        };
+
+        // Crear la ventana principal
+        new listaLibro(libros);
+    }
+}

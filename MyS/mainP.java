@@ -1,0 +1,72 @@
+package MyS;
+
+public class mainP {
+    public static void main(String[] args) {
+        // Crear algunos libros de ejemplo
+        misterioysus[] libros = new misterioysus[] {
+            new misterioysus("Diez Negritos", "Agatha Christie", 15.99, 10, 
+                "Una de las obras más populares de la \"Reina del Crimen,\" donde diez desconocidos quedan atrapados en una isla y empiezan a morir uno por uno.",
+                "HarperCollins", "2001", 256, "Español", "C:\\imagenes\\Diez-negritos.png"),
+            new misterioysus("Cicatriz", "Juan Gómez-Jurado", 12.49, 15, 
+                "Una historia que combina intriga y acción, narrada desde la perspectiva de un programador que descubre que su pareja guarda secretos oscuros.",
+                "Planeta", "2015", 320, "Español", "C:\\imagenes\\cicatriz.jpg"),
+            new misterioysus("La Biblioteca de los Muertos", "Glenn Cooper", 20.99, 8, 
+                "Una novela que mezcla un misterioso libro encontrado en el siglo VIII con una serie de asesinatos en la época actual.",
+                "Ediciones B", "2009", 412, "Español", "C:\\imagenes\\biblioteca.jpg"),
+            new misterioysus("El Código Da Vinci", "Dan Brown", 15.99, 20, 
+                "Esta novela de misterio y suspenso está llena de enigmas religiosos y psicológicos, donde un simbologista y una criptóloga investigan un asesinato en el Louvre que los lleva a descubrir secretos ocultos de la Iglesia Católica.",
+                "Planeta", "2003", 592, "Español", "C:\\imagenes\\codigo.jpg"),
+            new misterioysus("Antes de dormir", "S.J. Watson", 21.00, 18, 
+                "Una mujer que pierde la memoria cada día al despertar comienza a descubrir oscuros secretos sobre su vida.",
+                "Suma de Letras", "2011", 368, "Español", "C:\\imagenes\\dormir.jpg"),
+            new misterioysus("El juego de Gerald", "Stephen King", 11.95, 13, 
+                "Una novela que combina el suspenso psicológico con lo sobrenatural. La protagonista, Jessie, se encuentra atrapada en una cabaña después de que un juego sexual con su esposo se salga de control. Mientras lucha por sobrevivir, se enfrenta a su propio pasado y a las fuerzas que se desatan en su mente.",
+                "Alianza Editorial", "1988", 368, "Español", "C:\\imagenes\\eljuego.jpg"),
+            new misterioysus("El Asesinato en el Orient Express", "Agatha Christie", 16.95, 23, 
+                "Un famoso detective debe resolver un asesinato a bordo de un tren lujoso atrapado en la nieve.",
+                "Agatha Christie Limited", "1934", 256, "Español", "C:\\imagenes\\asesinato.jpg"),
+            new misterioysus("El nombre de la rosa", "Umberto Eco", 19.99, 5, 
+                "Ambientada en una abadía medieval, esta novela combina el misterio de una serie de asesinatos con temas religiosos, filosóficos y teológicos. El protagonista, el monje franciscano Guillermo de Occam, investiga los crímenes mientras desentraña secretos oscuros relacionados con la fe, la herejía y el conocimiento prohibido.",
+                "Ediciones Lumen", "1980", 512, "Español", "C:\\imagenes\\elnombre.jpg"),
+            new misterioysus("El Sabueso de los Baskerville", "Arthur Conan Doyle", 12.95, 11, 
+                "Una de las historias más famosas de Sherlock Holmes, que mezcla elementos de misterio con lo sobrenatural.",
+                "Penguin Random House", "1902", 288, "Español", "C:\\imagenes\\elsabueso.jpg"),
+            new misterioysus("El silencio de los corderos", "Thomas Harris", 15.95, 10, 
+                "La historia de la relación entre una joven agente del FBI y el asesino en serie Hannibal Lecter, quien la ayuda a capturar a otro asesino.",
+                "Ediciones B", "1988", 336, "Español", "C:\\imagenes\\elsilencio.jpg"),
+            new misterioysus("El susurrador", "Donato Carrisi", 18.95, 16, 
+                "Un psicólogo forense se enfrenta a un caso de secuestros y asesinatos de mujeres, mientras se ve atrapado en un juego psicológico que pone a prueba sus propias creencias.",
+                "Ediciones Duomo", "2009", 512, "Español", "C:\\imagenes\\elsusurrador.jpg"),
+            new misterioysus("La Casa de las Hojas", "Mark Z. Danielewski", 21.99, 10, 
+                "Un relato experimental en el que un hombre investiga un extraño misterio relacionado con una casa que parece tener dimensiones y propiedades cambiantes.",
+                "Editorial Anagrama", "2000", 704, "Español", "C:\\imagenes\\lacasa.jpg"),
+            new misterioysus("La chica del tren", "Paula Hawkins", 19.99, 9, 
+                "Rachel, la protagonista, viaja todos los días en tren y observa la vida de una pareja aparentemente perfecta. Un día, la mujer de la pareja desaparece, y Rachel se ve atrapada en una intrincada red de secretos y mentiras, mientras su propia percepción se pone en duda.",
+                "Editorial Planeta", "2015", 368, "Español", "C:\\imagenes\\lachica.jpg"),
+            new misterioysus("La verdad sobre el caso de Harry Quebert", "Joël Dicker", 25.99, 20, 
+                "Un escritor joven investiga el caso de su mentor, Harry Quebert, quien está acusado del asesinato de una joven. A medida que avanza la investigación, se revelan secretos profundos sobre los personajes y sus emociones, desafiando las percepciones de la verdad y la culpabilidad.",
+                "Alfaguara", "2012", 688, "Español", "C:\\imagenes\\laverdad.jpg"),
+            new misterioysus("El lector de cadáveres", "Antonio Garrido", 17.99, 5, 
+                "Ambientada en la China medieval, cuenta la historia de un joven forense que utiliza métodos avanzados para resolver crímenes.",
+                "Ediciones Maeva", "2012", 464, "Español", "C:\\imagenes\\lector.jpg"),
+            new misterioysus("La mujer en la ventana", "A.J. Finn", 14.99, 6, 
+                "Una mujer, aislada en su casa debido a una fobia, cree ser testigo de un crimen en la casa vecina, pero su percepción es puesta en duda.",
+                "Suma de Letras", "2018", 448, "Español", "C:\\imagenes\\mujerenla.jpg"),
+            new misterioysus("La paciente silenciosa", "Alex Michaelides", 22.99, 13, 
+                "Una psicoterapeuta trata de entender el caso de una mujer que asesinó a su esposo y no ha dicho una sola palabra desde entonces.",
+                "Grijalbo", "2019", 368, "Español", "C:\\imagenes\\paciente.jpg"),
+            new misterioysus("Reina Roja", "Juan Gómez-Jurado", 25.99, 7, 
+                "Un libro que sigue a Antonia Scott, una mujer con una mente brillante, mientras resuelve casos imposibles.",
+                "Editorial Planeta", "2018", 464, "Español", "C:\\imagenes\\reina.jpg"),
+            new misterioysus("La casa de los conejos", "Laura Alcoba", 35.99, 5, 
+                "Una joven, al llegar a una casa llena de misterios y secretos, debe enfrentar una verdad perturbadora sobre su familia. La novela juega con las tensiones psicológicas, el ambiente opresivo y las emociones de los personajes.",
+                "Editorial Anagrama", "2008", 304, "Español", "C:\\imagenes\\lacasadelosconejos.jpg"),
+            new misterioysus("Perdida", "Gillian Flynn", 14.95, 11, 
+                "Esta novela se centra en la desaparición de Amy Dunne y la sospecha que recae sobre su esposo, Nick. A medida que la historia avanza, se revelan giros inesperados y se exploran los oscuros secretos de su relación, llevando al lector a cuestionar la verdad y las manipulaciones psicológicas.",
+                "Editorial Planeta", "2012", 432, "Español", "C:\\imagenes\\prdida.jpg")
+        };
+
+        // Crear la ventana principal
+        new listaLibro(libros);
+    }
+}

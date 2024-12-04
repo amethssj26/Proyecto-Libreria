@@ -1,0 +1,72 @@
+package Romance;
+
+public class mainR {
+    public static void main(String[] args) {
+        // Crear algunos libros de ejemplo
+        romance[] libros = new romance[] {
+        new romance("Orgullo y prejuicio", "Jane Austen", 12.99, 18, 
+            "Una historia sobre el amor y los prejuicios entre Elizabeth Bennet y el aristocrático señor Darcy, ambientada en la Inglaterra del siglo XIX.",
+            "Penguin Classics", "1813", 432, "Español", "C:\\imagenes\\orgullo.jpg"),
+        new romance("Cumbres borrascosas", "Emily Brontë", 14.50, 12, 
+            "Una historia de amor apasionada y trágica entre Heathcliff y Catherine, ambientada en los sombríos páramos de Yorkshire.",
+            "Alianza Editorial", "1847", 416, "Español", "C:\\imagenes\\cumbres.jpg"),
+        new romance("Jane Eyre", "Charlotte Brontë", 13.99, 20, 
+            "La vida de Jane Eyre, desde su infancia como huérfana hasta su amor por el misterioso señor Rochester.",
+            "Ediciones Alianza", "1847", 544, "Español", "C:\\imagenes\\jane.jpg"),
+        new romance("Bajo la misma estrella", "John Green", 11.50, 25, 
+            "Una emotiva historia de amor entre dos adolescentes que enfrentan el cáncer mientras buscan vivir al máximo.",
+            "Nube de Tinta", "2012", 336, "Español", "C:\\imagenes\\bajo.jpg"),
+        new romance("El cuaderno de Noah", "Nicholas Sparks", 15.99, 16, 
+            "Una conmovedora historia de amor que trasciende el tiempo, narrada a través de las páginas de un diario.",
+            "Roca Editorial", "1996", 240, "Español", "C:\\imagenes\\elcuaderno.jpg"),
+        new romance("Posdata: Te amo", "Cecelia Ahern", 13.50, 22, 
+            "Holly encuentra consuelo y esperanza a través de las cartas que su difunto esposo le dejó antes de morir.",
+            "HarperCollins", "2004", 512, "Español", "C:\\imagenes\\posdata.jpg"),
+        new romance("El tiempo entre costuras", "María Dueñas", 16.50, 18, 
+            "La apasionante historia de Sira Quiroga, una costurera que se ve envuelta en el amor, el espionaje y los conflictos internacionales durante la Guerra Civil Española.",
+            "Editorial Planeta", "2009", 640, "Español", "C:\\imagenes\\eltiempo.jpg"),
+        new romance("Los puentes de Madison", "Robert James Waller", 12.99, 10, 
+            "Una breve pero intensa historia de amor entre un fotógrafo y una ama de casa en el corazón de Iowa.",
+            "Vintage Español", "1992", 192, "Español", "C:\\imagenes\\lospuen.jpg"),
+        new romance("Un paseo para recordar", "Nicholas Sparks", 14.50, 15, 
+            "Un joven rebelde y la hija del pastor descubren el poder del amor verdadero en esta conmovedora historia.",
+            "Roca Editorial", "1999", 240, "Español", "C:\\imagenes\\unpaseo.jpg"),
+        new romance("Eleanor y Park", "Rainbow Rowell", 12.99, 24, 
+            "Dos adolescentes inadaptados encuentran el amor y la aceptación en esta dulce y nostálgica historia de los años 80.",
+            "Alfaguara", "2013", 336, "Español", "C:\\imagenes\\eleanor.jpg"),
+        new romance("Cazadores de sombras: Ciudad de hueso", "Cassandra Clare", 14.00, 20, 
+            "Clary Fray descubre un mundo secreto lleno de cazadores de sombras y un amor complicado con el misterioso Jace.",
+            "Destino", "2007", 512, "Español", "C:\\imagenes\\cazadores.jpg"),
+        new romance("Llámame por tu nombre", "André Aciman", 15.99, 20, 
+            "Un romance apasionado entre Elio y Oliver durante un verano en Italia, donde el deseo y el amor florecen intensamente.",
+            "Alfaguara", "2007", 288, "Español", "C:\\imagenes\\llamame.jpg"),
+        new romance("Aristóteles y Dante descubren los secretos del universo", "Benjamin Alire Sáenz", 14.50, 25, 
+            "La historia de dos chicos que forman una amistad transformadora que los lleva a descubrir el amor y el sentido de identidad.",
+            "Planeta", "2012", 392, "Español", "C:\\imagenes\\aris.jpg"),
+        new romance("Roja, blanca y sangre azul", "Casey McQuiston", 16.99, 22, 
+            "Una comedia romántica sobre Alex, el hijo de la presidenta de Estados Unidos, y Henry, un príncipe británico, que encuentran el amor mientras intentan mantener su relación en secreto.",
+            "Suma de Letras", "2019", 432, "Español", "C:\\imagenes\\rojo.jpg"),
+        new romance("Hasta que el viento te devuelva la sonrisa", "Alexandra Roma", 14.99, 12, 
+            "Una historia de segundas oportunidades y amor que desafía las adversidades de la vida.",
+            "Plataforma Neo", "2017", 560, "Español", "C:\\imagenes\\hastaq.jpg"),
+        new romance("La canción de Aquiles", "Madeline Miller", 15.50, 22, 
+            "Una reimaginación del mito de Aquiles y Patroclo, explorando su relación como una épica historia de amor.",
+            "Alianza Editorial", "2011", 384, "Español", "C:\\imagenes\\lacancion.jpg"),
+        new romance("Mil soles espléndidos", "Khaled Hosseini", 13.99, 17, 
+            "La vida de dos mujeres afganas cuyos destinos se entrelazan en una historia de amistad y amor en tiempos de guerra.",
+            "Salamandra", "2007", 384, "Español", "C:\\imagenes\\milsoles.jpg"),
+        new romance("Estrellas Fugaces", "Anna Todd", 14.00, 20, 
+            "Un romance intenso y complicado entre dos almas perdidas que intentan encontrar el camino juntas.",
+            "Editorial Planeta", "2019", 320, "Español", "C:\\imagenes\\stars.jpg"),
+        new romance("Pequeñas cosas bellas", "Cheryl Strayed", 15.99, 14, 
+            "Una colección de cartas conmovedoras que revelan historias de amor, pérdida y redención.",
+            "Vintage Español", "2012", 400, "Español", "C:\\imagenes\\peque.jpg"),
+        new romance("Una corte de rosas y espinas", "Sarah J. Maas", 14.50, 21, 
+            "Una joven cazadora es llevada a un reino mágico, donde un romance inesperado la obliga a luchar por su vida y su amor.",
+            "Planeta", "2015", 432, "Español", "C:\\imagenes\\unacorte.jpg")
+        };
+
+        // Crear la ventana principal
+        new listaLibro(libros);
+    }
+}

@@ -19,7 +19,7 @@ public class Libreria extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Fondo
-        BackgroundPanel backgroundPanel = new BackgroundPanel("C:/Users/johan/OneDrive/Desktop/Java/Recursos/Imágenes/Class NieR.jpg");
+        BackgroundPanel backgroundPanel = new BackgroundPanel("C:/Users/johan/OneDrive/Desktop/Java/Recursos/Imágenes/Login.png");
         setContentPane(backgroundPanel);
         backgroundPanel.setLayout(new BorderLayout());
 
@@ -77,7 +77,7 @@ public class Libreria extends JFrame {
         backgroundPanel.add(loginPanel, BorderLayout.CENTER);
 
         // Iniciar música
-        playMusic("C:/Users/johan/OneDrive/Desktop/Java/Recursos/Audio/Dance of Evanescence.wav");
+        playMusic("C:/Users/johan/OneDrive/Desktop/Java/Recursos/Audio/Song of the Ancients.wav");
 
         setVisible(true);
     }
@@ -109,21 +109,31 @@ public class Libreria extends JFrame {
     private class LoginAction implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            String usuario = usuarioField.getText();
-            String password = new String(passwordField.getPassword());
+            String usuario = usuarioField.getText(); // Obtener el usuario ingresado
+            String password = new String(passwordField.getPassword()); // Obtener la contraseña ingresada
+    
+            // Verificar credenciales usando el método estático
             if (ControladorUsuarios.verificarLogin(usuario, password)) {
                 JOptionPane.showMessageDialog(null, "Inicio de sesión exitoso");
+    
+                // Cerrar la ventana de login
                 dispose();
+    
+                // Abrir la ventana principal (Home)
+                DigitalLibraryHome home = new DigitalLibraryHome(usuario); // Pasar el usuario al Home
+                home.setVisible(true); // Hacer visible la ventana del Home
             } else {
-                JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
+                // Mostrar mensaje de error si las credenciales son incorrectas
+                JOptionPane.showMessageDialog(null, "Credenciales incorrectas. Intenta nuevamente.");
             }
         }
     }
+    
 
     public static class Conexion {
         private static final String URL = "jdbc:mysql://localhost:3306/ProjectoL";
         private static final String USER = "root";
-        private static final String PASSWORD = "Naturaleza28";
+        private static final String PASSWORD = "12345";
 
         public static Connection getConnection() {
             try {
